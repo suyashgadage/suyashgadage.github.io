@@ -5,8 +5,8 @@ Agricultural Engineer and Design Engineer with expertise in **Discrete Element M
 ## 🛠️ Technical Expertise
 - **Design & Modeling**: Creo Parametric 11, Solidworks, AutoCAD
 - **Simulation & Analysis**: Altair EDEM 2025, ANSYS (Static & Dynamic), FEA Integration
-- **Specializations**: Soil-tool interaction, draft force prediction, structural optimization
-- **Programming**: Python (Data Analysis), JavaScript, C++ (Robotics Basics)
+- **Robotics & Frameworks**: ROS2, Gazebo, RViz, MoveIt, Nav2
+- **Programming**: Python (Numpy, Pandas, Matplotlib, SciKit Learn)
 
 ## Featured Projects
 - **DEM Analysis of Soil-Basin Lister**: Validated soil-tool interaction simulation with <29% relative error, optimizing implements for moisture conservation at varying speeds (2-5 km/h).
