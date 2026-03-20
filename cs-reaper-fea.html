@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -587,4 +588,595 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Project: Design & FEA of Agricultural Reaper | Suyash Gadage</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e3a8a",
+                        "primary-hover": "#1e40af",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#f8fafc",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#334155",
+                        "text-dark": "#cbd5e1",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-display font-bold text-xl text-primary">SG.</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#about">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#research">Research</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#projects">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#skills">Skills</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#experience">Experience</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#achievements">Achievements</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-400"
+                        id="darkModeToggle">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover btn-hover-effect"
+                        href="index.html#contact">
+                        Let's Collaborate!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="pt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+            <div class="lg:col-span-6 space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    Engineering Project 2024
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                    Design & FEA of <span class="text-primary">Agricultural Reaper</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+                    Structural analysis and optimization of an agricultural reaper machine to address harvesting labor
+                    shortages and improve crop cutting efficiency.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#visual-evidence"
+                        class="flex items-center gap-2 bg-primary text-white border border-transparent px-8 py-4 rounded-xl font-bold btn-hover-effect">
+                        <i class="fas fa-play-circle text-xl"></i> See Analysis
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-6 relative">
+                <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-700 border-8 border-white dark:border-gray-900 bg-cover bg-center"
+                    style="background-image: url('assets/images/Reaper/Reaper_assembly_cad.png');">
+                </div>
+                <!-- Floating Card -->
+                <div
+                    class="absolute -bottom-6 -right-6 bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 max-w-[240px]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-microchip text-primary font-bold"></i>
+                        <span class="text-xs font-bold uppercase text-gray-400 tracking-widest">FEA Insight</span>
+                    </div>
+                    <div class="text-xl font-bold text-primary">Validated Structural Integrity</div>
+                    <p class="text-xs text-gray-500 mt-1">Static & Fatigue Analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Objective -->
+        <section class="mb-24 scroll-mt-32" id="objective">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-bullseye"></i>
+                </span>
+                Objective
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white dark:bg-surface-dark p-10 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Design Challenge</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        The increasing demand for manual workers during the harvesting season presents a significant
+                        challenge in modern agriculture. The objective was to design a robust agricultural reaper to
+                        efficiently cut crops like wheat and rice, mechanizing the process to reduce labor while
+                        maintaining structural reliability under varied field conditions.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Goal</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Model a complete reaper assembly including the main frame, cutting mechanism, and
+                                conveying system.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Perform static structural and fatigue analysis to evaluate equivalent (von-Mises)
+                                stress and total deformation.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Compare materials (such as AISI 1095 High Carbon Steel and IS2062 Mild Steel) to
+                                ensure a balance between strength and operational efficiency.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Process & Tech Stack -->
+        <section class="mb-24 scroll-mt-32" id="process">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-gears"></i>
+                </span>
+                Process & Tech Stack
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800">
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <span
+                                    class="w-6 h-6 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center text-[10px]">01</span>
+                                Assembly Design
+                            </h4>
+                            <p class="text-sm text-gray-500">Engineered a comprehensive 3D CAD assembly integrating the
+                                main frame, fixed and reciprocating cutter bars, star wheels, and power transmission
+                                system.</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800">
+                            <h4 class="font-bold mb-3 flex items-center gap-2">
+                                <span
+                                    class="w-6 h-6 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center text-[10px]">02</span>
+                                Meshing & Loading
+                            </h4>
+                            <p class="text-sm text-gray-500">Executed fine-tuned meshing and applied realistic boundary
+                                conditions, including a 2000N perpendicular cutting force on the blades and 3000N
+                                horizontal motion resistance on the frame.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 bg-primary text-white p-8 rounded-3xl shadow-lg border border-primary-hover">
+                    <h3 class="text-xl font-bold mb-6">Tools & Software</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                            <span class="text-white/80">3D Modeling</span>
+                            <span class="font-bold font-display">Solidworks</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                            <span class="text-white/80">Analysis</span>
+                            <span class="font-bold font-display">ANSYS</span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                            <span class="text-white/80">Simulation</span>
+                            <span class="font-bold font-display">Static Structural & Fatigue</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white/80">Validation</span>
+                            <span class="font-bold font-display">Stress, Strain & Deformation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Visual Evidence -->
+        <section class="mb-24 scroll-mt-32" id="visual-evidence">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-eye"></i>
+                </span>
+                Visual Evidence
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <!-- Carousel Container -->
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 bg-gray-900 aspect-video">
+                        <!-- Slides Container -->
+                        <div id="carouselSlides" class="flex transition-transform duration-500 ease-out h-full">
+                            <!-- Slide 1: Cutter Analysis -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/Cutter_analysis.png" alt="Cutter Analysis"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 3: Deformation -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/deformation.png" alt="Total Deformation"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 4: Main Frame Deformation -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/main_frame_deformation.png" alt="Main Frame Deformation"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 5: Main Frame Stress -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/main_frame_stress.png" alt="Main Frame Stress"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 6: Max Principle Strain -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/max_principle_strain.png" alt="Max Principle Strain"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 7: Shear Stress -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/shear_stress.png" alt="Shear Stress"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 8: Stress Overlay -->
+                            <div class="min-w-full h-full relative">
+                                <img src="assets/images/Reaper/stress.png" alt="Equivalent Stress"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button id="prevSlide"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextSlide"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Dots/Indicators -->
+                        <div class="absolute bottom-4 right-6 flex gap-2" id="carouselIndicators"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic">ANSYS FEA results showing the total deformation across the
+                        reciprocating cutter blade under a 2000N simulated crop resistance load. (Hover to pause
+                        slideshow)</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+                    <h4 class="font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
+                        <i class="fas fa-diagram-project text-primary text-sm"></i>
+                        Analysis Workflow
+                    </h4>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs font-display">
+                                CAD</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-gray-800 dark:text-gray-200">Solidworks Modeling</h5>
+                                <p class="text-xs text-gray-500">Creating dimensionally accurate parts (frame, dividers,
+                                    lugs, star wheels) and completing the full machine assembly ready for simulation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xs font-display">
+                                FEA</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-gray-800 dark:text-gray-200">ANSYS Solver</h5>
+                                <p class="text-xs text-gray-500">Importing the model, applying material properties, and
+                                    running iterations to validate safety under peak operational loads.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Outcome -->
+        <section class="mb-24 scroll-mt-32" id="outcome">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-square-poll-vertical"></i>
+                </span>
+                Outcome
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="p-8 rounded-3xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800 text-center">
+                    <div class="text-4xl font-display font-bold text-blue-600 mb-2">2.42 mm</div>
+                    <p class="text-xs font-bold uppercase text-blue-800 dark:text-blue-300 tracking-widest">Max Cutter
+                    </p>
+                    <p class="text-[10px] text-blue-600 mt-2">Deformation</p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-800 text-center">
+                    <div class="text-4xl font-display font-bold text-red-600 mb-2">890.6 MPa</div>
+                    <p class="text-xs font-bold uppercase text-red-800 dark:text-red-300 tracking-widest">Max Cutter</p>
+                    <p class="text-[10px] text-red-600 mt-2">Stress (Equivalent)</p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-green-50 dark:bg-green-900/10 border border-green-100 dark:border-green-800 text-center">
+                    <div class="text-4xl font-display font-bold text-green-600 mb-2">0.32 mm</div>
+                    <p class="text-xs font-bold uppercase text-green-800 dark:text-green-300 tracking-widest">Max Frame
+                    </p>
+                    <p class="text-[10px] text-green-600 mt-2">Deformation</p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-orange-50 dark:bg-orange-900/10 border border-orange-100 dark:border-orange-800 text-center">
+                    <div class="text-4xl font-display font-bold text-orange-600 mb-2">20.27 MPa</div>
+                    <p class="text-xs font-bold uppercase text-orange-800 dark:text-orange-300 tracking-widest">Max
+                        Frame</p>
+                    <p class="text-[10px] text-orange-600 mt-2">Stress (Equivalent)</p>
+                </div>
+            </div>
+            <div
+                class="mt-12 p-8 rounded-3xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                <p>The static structural analysis validated the mechanical integrity of the reaper design under
+                    simulated field loads. Utilizing AISI 1095 High Carbon Steel for the cutter and IS2062 Mild Steel
+                    for the main frame ensured lower deformation and high stability. The insights gained from the stress
+                    distribution and fatigue analysis facilitated design refinements, ensuring the machinery can
+                    withstand continuous cutting stresses while maximizing harvesting productivity.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-gray-200 dark:border-gray-800 max-w-7xl mx-auto px-6 text-center">
+        <a href="index.html" class="inline-flex items-center gap-2 text-primary font-bold hover:underline mb-8">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <div class="flex justify-center space-x-6 mb-8 text-2xl text-gray-400">
+            <a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/suyashgadage/"
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+
+            <a class="hover:text-primary transition-colors" href="mailto:work.suyashgadage@gmail.com" target="_blank"
+                rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-400 text-sm mt-8">© 2025 Suyash Gadage. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900/90 backdrop-blur-md cursor-zoom-out" id="lightboxBackdrop"></div>
+
+        <!-- Lightbox Content -->
+        <div class="relative z-10 max-w-5xl w-full transform transition-all scale-95 opacity-0 duration-300"
+            id="lightboxContent">
+            <img id="lightboxImage" src="" alt="Full Screen Preview" class="w-full h-auto rounded-2xl shadow-2xl">
+
+            <!-- Close Button -->
+            <button id="closeLightbox"
+                class="absolute -top-12 right-0 text-white text-4xl hover:text-primary transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Lightbox Navigation -->
+            <button id="prevLightbox"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextLightbox"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center hover:bg-primary transition-all">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Image Lightbox Logic
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const closeLightbox = document.getElementById('closeLightbox');
+        const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+        const prevLightboxBtn = document.getElementById('prevLightbox');
+        const nextLightboxBtn = document.getElementById('nextLightbox');
+
+        // Select gallery images only
+        const galleryImages = document.querySelectorAll('#visual-evidence img');
+        // Select hero image separately
+        const heroImage = document.querySelector('.lg\\:col-span-6.relative .aspect-square');
+
+        let currentLightboxIndex = 0;
+        let lightboxInterval;
+
+        const updateLightboxImage = (index, resetTimer = true) => {
+            currentLightboxIndex = index;
+            if (currentLightboxIndex >= galleryImages.length) currentLightboxIndex = 0;
+            if (currentLightboxIndex < 0) currentLightboxIndex = galleryImages.length - 1;
+
+            const target = galleryImages[currentLightboxIndex];
+            const src = target.src;
+
+            if (src) {
+                lightboxImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    lightboxImg.src = src;
+                    lightboxImg.style.opacity = '1';
+                }, 100);
+            }
+
+            // Ensure navigation is visible for gallery
+            prevLightboxBtn.classList.remove('hidden');
+            nextLightboxBtn.classList.remove('hidden');
+
+            if (resetTimer) resetLightboxTimer();
+        };
+
+        const resetLightboxTimer = () => {
+            clearInterval(lightboxInterval);
+            lightboxInterval = setInterval(() => updateLightboxImage(currentLightboxIndex + 1, false), 5000);
+        };
+
+        const showLightbox = () => {
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            setTimeout(() => {
+                lightboxContent.classList.remove('scale-95', 'opacity-0');
+                lightboxContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        };
+
+        galleryImages.forEach((img, index) => {
+            img.classList.add('cursor-zoom-in', 'hover:opacity-95', 'transition-opacity');
+            img.addEventListener('click', () => {
+                updateLightboxImage(index);
+                showLightbox();
+            });
+        });
+
+        if (heroImage) {
+            heroImage.classList.add('cursor-zoom-in');
+            heroImage.addEventListener('click', () => {
+                const bgImage = window.getComputedStyle(heroImage).backgroundImage;
+                const src = bgImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1');
+
+                lightboxImg.src = src;
+                lightboxImg.style.opacity = '1';
+
+                // Hide navigation for hero image
+                prevLightboxBtn.classList.add('hidden');
+                nextLightboxBtn.classList.add('hidden');
+
+                showLightbox();
+                clearInterval(lightboxInterval);
+            });
+        }
+
+        const hideLightbox = () => {
+            clearInterval(lightboxInterval);
+            lightboxContent.classList.remove('scale-100', 'opacity-100');
+            lightboxContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+
+        closeLightbox.addEventListener('click', hideLightbox);
+        lightboxBackdrop.addEventListener('click', hideLightbox);
+        prevLightboxBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateLightboxImage(currentLightboxIndex - 1);
+        });
+        nextLightboxBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateLightboxImage(currentLightboxIndex + 1);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') hideLightbox();
+            if (e.key === 'ArrowLeft') updateLightboxImage(currentLightboxIndex - 1);
+            if (e.key === 'ArrowRight') updateLightboxImage(currentLightboxIndex + 1);
+        });
+
+        // Pause lightbox on hover
+        lightboxContent.addEventListener('mouseenter', () => clearInterval(lightboxInterval));
+        lightboxContent.addEventListener('mouseleave', resetLightboxTimer);
+
+        // Slideshow / Carousel Logic
+        const slidesContainer = document.getElementById('carouselSlides');
+        const slides = slidesContainer.children;
+        const totalSlides = slides.length;
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Create Indicators
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = `w-2 h-2 rounded-full transition-all ${i === 0 ? 'bg-primary w-6' : 'bg-white/50 hover:bg-white'}`;
+            dot.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(dot);
+        }
+
+        const updateIndicators = () => {
+            const dots = indicatorsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                if (i === currentSlide) {
+                    dots[i].classList.add('bg-primary', 'w-6');
+                    dots[i].classList.remove('bg-white/50');
+                } else {
+                    dots[i].classList.remove('bg-primary', 'w-6');
+                    dots[i].classList.add('bg-white/50');
+                }
+            }
+        };
+
+        const goToSlide = (index) => {
+            currentSlide = index;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateIndicators();
+            resetInterval();
+        };
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+        };
+
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+
+        // Pause on hover
+        const carousel = slidesContainer.parentElement;
+        carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        carousel.addEventListener('mouseleave', resetInterval);
+
+        resetInterval();
+    </script>
+</body>
+
+>>>>>>> a01e09bf0c56e6f54256d04bbe093880c9f406d5
 </html>
