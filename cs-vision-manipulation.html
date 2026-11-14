@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Project: Vision-Guided Robotic Manipulation | Suyash Gadage</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e3a8a",
+                        "primary-hover": "#1e40af",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                        "surface-light": "#f8fafc",
+                        "surface-dark": "#1e293b",
+                        "text-light": "#334155",
+                        "text-dark": "#cbd5e1",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-display font-bold text-xl text-primary">SG.</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#about">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#research">Research</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#projects">Projects</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#skills">Skills</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#experience">Experience</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="index.html#achievements">Achievements</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-400"
+                        id="darkModeToggle">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-hover btn-hover-effect"
+                        href="index.html#contact">
+                        Let's Collaborate!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 mt-16">
+            <div class="lg:col-span-6 space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    Computer Vision & Robotics (Aug – Sep 2026)
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-bold leading-[1.15] tracking-tight">
+                    <span class="text-primary">Vision-Guided</span> Robotic Manipulation Pipeline
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+                    Bridging projective geometry and planar homography to autonomous agricultural manipulation: an end-to-end vision-to-action pipeline using ROS 2 Jazzy, Gazebo Harmonic, and MoveIt 2 on a 6-DOF industrial manipulator.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#visual-evidence"
+                        class="flex items-center gap-2 bg-primary text-white border border-transparent px-7 py-3.5 rounded-xl font-bold btn-hover-effect">
+                        <i class="fas fa-play-circle text-xl"></i> See Visual Proof
+                    </a>
+                    <a href="https://github.com/suyashgadage/vision-guided-pick-and-place" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 border-2 border-gray-200 dark:border-gray-800 px-7 py-3.5 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all text-gray-900 dark:text-white">
+                        <i class="fab fa-github text-xl"></i> View Repository
+                    </a>
+                    <a href="https://lnkd.in/p/grsGvEcm" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 border-2 border-gray-200 dark:border-gray-800 px-7 py-3.5 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all text-gray-900 dark:text-white">
+                        <i class="fab fa-linkedin text-xl text-blue-600"></i> LinkedIn Post
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-6 relative">
+                <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-gray-900 border-8 border-white dark:border-gray-900 bg-cover bg-center"
+                    style="background-image: url('assets/images/VisionManipulation/hero_simulation.png');">
+                </div>
+                <!-- Floating Badge -->
+                <div
+                    class="absolute -bottom-6 -right-6 bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 max-w-[280px]">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="material-symbols-outlined text-primary font-bold"><i class="fas fa-crosshairs"></i></span>
+                        <span class="text-xs font-bold uppercase text-gray-400 tracking-widest">Accuracy Metric</span>
+                    </div>
+                    <div class="text-xl font-bold text-primary leading-tight">&lt; 0.5 cm Reprojection Error</div>
+                    <div class="text-xs text-gray-500 mt-1">Calibrated via Direct Linear Transformation (DLT)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Challenge & Motivation -->
+        <section class="mb-24 scroll-mt-32" id="objective">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-bullseye"></i>
+                </span>
+                Motivation & The AgTech Challenge
+            </h2>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white dark:bg-surface-dark p-10 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">The Engineering Problem</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        While studying Projective Geometry and Planar Homography from the NPTEL Computer Vision course at IIT Kharagpur (taught by Prof. Jayanta Mukhopadhyay), I identified a pivotal challenge in agricultural automation: accurately mapping 2D visual detections from an overhead camera to reliable 3D robot coordinates for physical manipulation.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Full 3D RGB-D point cloud processing is computationally heavy and often impractical on constrained mobile robot processors in field operations. When agricultural targets reside on a planar surface (e.g. grading tables or flat beds), planar homography offers a lightweight, high-speed deterministic alternative.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Core Project Goals</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Construct an end-to-end vision-guided manipulation pipeline in <strong>ROS 2 Jazzy</strong> and <strong>Gazebo Harmonic</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Formulate and calibrate a 3x3 Homography transformation via <strong>Direct Linear Transformation (DLT)</strong> with &lt; 0.5 cm reprojection error.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <span>Integrate HSV-based OpenCV centroid segmentation with <strong>MoveIt 2 (pymoveit2)</strong> for collision-free trajectory execution on a 6-DOF industrial arm (RobotAnno EA66).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Mathematical Foundation & Architecture -->
+        <section class="mb-24 scroll-mt-32" id="math-pipeline">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-square-root-variable"></i>
+                </span>
+                How the Math & Pipeline Work
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col">
+                    <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center text-xs font-bold font-display mb-4">01</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Planar Assumption</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Targets lie on a known plane (table or bed). Camera perspective projection simplifies directly to an invertible 3×3 Homography matrix <span class="font-mono font-bold text-primary dark:text-blue-400">H</span> with 8 degrees of freedom:
+                    </p>
+                    <div class="p-2.5 bg-blue-50/70 dark:bg-blue-950/40 rounded-xl border border-blue-100 dark:border-blue-900/40 text-center mt-auto">
+                        <span class="font-mono text-xs font-bold text-primary dark:text-blue-300 tracking-wide">x = H · x<sub>plane</sub></span>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col">
+                    <div class="w-8 h-8 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg flex items-center justify-center text-xs font-bold font-display mb-4">02</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Calibration via DLT</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Using ground-truth spatial markers, we formulate the homogeneous linear system and solve via SVD / Direct Linear Transformation:
+                    </p>
+                    <div class="p-2.5 bg-green-50/70 dark:bg-green-950/40 rounded-xl border border-green-100 dark:border-green-900/40 text-center mt-auto">
+                        <span class="font-mono text-xs font-bold text-green-700 dark:text-green-300 tracking-wide">A<sub>i</sub> · h = 0</span>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col">
+                    <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center text-xs font-bold font-display mb-4">03</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Segmentation & Moments</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        BGR images are converted to HSV for lighting-robust color isolation. Target centroids are extracted via 2D spatial moments:
+                    </p>
+                    <div class="p-2.5 bg-purple-50/70 dark:bg-purple-950/40 rounded-xl border border-purple-100 dark:border-purple-900/40 text-center mt-auto">
+                        <span class="font-mono text-xs font-bold text-purple-700 dark:text-purple-300 tracking-wide">c<sub>x</sub> = m<sub>10</sub>/m<sub>00</sub>, &nbsp; c<sub>y</sub> = m<sub>01</sub>/m<sub>00</sub></span>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col">
+                    <div class="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-lg flex items-center justify-center text-xs font-bold font-display mb-4">04</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Trajectory Execution</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                        Image coordinates (u, v) map to robot base frame coordinates, paired with downward end-effector quaternions, and commanded collision-free:
+                    </p>
+                    <div class="p-2.5 bg-orange-50/70 dark:bg-orange-950/40 rounded-xl border border-orange-100 dark:border-orange-900/40 text-center mt-auto">
+                        <span class="font-mono text-xs font-bold text-orange-700 dark:text-orange-400 tracking-wide">(u, v) &rarr; Base (X, Y, Z, q)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Box -->
+            <div class="bg-primary text-white p-8 rounded-3xl shadow-lg border border-primary-hover">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-1">ROS Framework</div>
+                        <div class="text-lg font-bold font-display">ROS 2 Jazzy</div>
+                    </div>
+                    <div>
+                        <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-1">Physics Engine</div>
+                        <div class="text-lg font-bold font-display">Gazebo Harmonic</div>
+                    </div>
+                    <div>
+                        <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-1">Manipulation</div>
+                        <div class="text-lg font-bold font-display">MoveIt 2 / pymoveit2</div>
+                    </div>
+                    <div>
+                        <div class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-1">Robot Hardware</div>
+                        <div class="text-lg font-bold font-display">RobotAnno EA66 (6-DOF)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Visual Evidence -->
+        <section class="mb-24 scroll-mt-32" id="visual-evidence">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-eye"></i>
+                </span>
+                Visual Evidence
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-8 space-y-4">
+                    <!-- Video Container -->
+                    <div
+                        class="relative group rounded-3xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800 bg-gray-950 aspect-video">
+                        <video controls autoplay loop muted playsinline class="w-full h-full object-cover">
+                            <source src="assets/images/VisionManipulation/Test.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="text-sm text-gray-500 italic text-center">
+                        Full-pipeline execution demo: Overhead camera stream segmentation in OpenCV, real-time planar homography matrix transformation, and collision-free MoveIt 2 trajectory execution on the RobotAnno EA66 in Gazebo Harmonic.
+                    </p>
+                </div>
+                <div
+                    class="lg:col-span-4 bg-surface-light dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 flex flex-col justify-between space-y-6">
+                    <div>
+                        <h4 class="font-bold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
+                            <i class="fas fa-diagram-project text-primary text-sm"></i>
+                            Pipeline Execution Breakdown
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex gap-3">
+                                <div
+                                    class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xs font-display">
+                                    CAM</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-gray-800 dark:text-gray-200">Overhead Detection</h5>
+                                    <p class="text-xs text-gray-500 mt-0.5">Captures <code class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-[10px]">/overhead_cam/image_raw</code>, thresholds HSV color masks, and extracts (u, v) pixel centroids.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div
+                                    class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-lg flex items-center justify-center font-bold text-xs font-display">
+                                    MOV</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-gray-800 dark:text-gray-200">MoveIt 2 Planning</h5>
+                                    <p class="text-xs text-gray-500 mt-0.5">Transforms (u, v) via 3x3 matrix H into base_link coordinates and plans collision-free path via pymoveit2.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <div
+                                    class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg flex items-center justify-center font-bold text-xs font-display">
+                                    GZ</div>
+                                <div>
+                                    <h5 class="text-sm font-bold text-gray-800 dark:text-gray-200">Gazebo Control</h5>
+                                    <p class="text-xs text-gray-500 mt-0.5">ros2_control JointTrajectoryController drives the 6-DOF arm to target coordinates within &lt;0.5 cm accuracy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-video mr-1 text-primary"></i> 1080p High-Fidelity Stream</span>
+                        <a href="https://github.com/suyashgadage/vision-guided-pick-and-place/blob/main/docs/Test.webm" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">
+                            GitHub Source <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: AgTech Applications -->
+        <section class="mb-24 scroll-mt-32" id="agtech-impact">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-seedling"></i>
+                </span>
+                Why This Matters in Agricultural Automation
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- App 1 -->
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-boxes-packing"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-white">Post-Harvest Sorting & Grading</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        High-speed conveyor inspection and robotic classification without demanding full 3D point cloud computation, maximizing sorting throughput.
+                    </p>
+                </div>
+                <!-- App 2 -->
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-spray-can-sparkles"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-white">Precision Micro-Weeding</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Downward-facing planar homography precisely pinpoints weed centroids across varying soil beds for targeted micro-spraying or mechanical removal.
+                    </p>
+                </div>
+                <!-- App 3 -->
+                <div class="bg-white dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                    <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/30 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-plant-wilt"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900 dark:text-white">Greenhouse Nursery Handling</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Automated seedling tray indexing, picking, and transplanting where planar geometric assumptions consistently hold true with high repeatability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Roadmap & Next Steps -->
+        <section class="mb-24 scroll-mt-32" id="next-steps">
+            <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                <span class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center">
+                    <i class="fas fa-compass"></i>
+                </span>
+                Roadmap & Next Steps
+            </h2>
+            <div class="bg-white dark:bg-surface-dark p-10 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm space-y-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">1</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Physical Hardware Validation</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            Deploy the calibrated pipeline directly onto the physical RobotAnno EA66 manipulator in the laboratory to validate real-world pick-and-place precision.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">2</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Intrinsic Lens Distortion Calibration</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            Incorporate complete camera intrinsic matrix calibration (<code class="text-xs bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-primary">cv2.calibrateCamera</code>) and undistortion before homography calculation to eliminate radial lens distortions.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 bg-primary/10 text-primary rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0 mt-1">3</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white">Integration with Mobile Agricultural Base</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            Mount the manipulation arm onto an autonomous mobile ground vehicle (e.g., Nova / SATCARD Ackermann rover) for integrated in-field autonomous harvesting and weeding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-gray-200 dark:border-gray-800 max-w-7xl mx-auto px-6 text-center">
+        <a href="projects.html" class="inline-flex items-center gap-2 text-primary font-bold hover:underline mb-8">
+            <i class="fas fa-arrow-left"></i> Back to All Projects
+        </a>
+        <div class="flex justify-center space-x-6 mb-8 text-2xl text-gray-400">
+            <a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/suyashgadage/"
+                target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a class="hover:text-primary transition-colors" href="https://github.com/suyashgadage" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a class="hover:text-primary transition-colors" href="mailto:work.suyashgadage@gmail.com" target="_blank"
+                rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-400 text-sm mt-8">© 2026 Suyash Gadage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+
+</html>
